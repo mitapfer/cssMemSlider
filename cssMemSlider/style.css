@@ -20,6 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 25px);
+  padding: 0 10px;
 }
 
 .slider__top {
@@ -154,4 +155,20 @@ input[type="radio"] {
 label:active span {
   background-color: #c7b600 !important;
   transform: scale(1.2);
+}
+
+@media(max-width: 475px) {
+  .slider__bottom {
+    flex-direction: column;
+  }
+
+  .navigator {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .descr {
+    order: 2;
+    font-size: 20px;
+  }
 }
