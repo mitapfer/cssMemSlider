@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>cssMemSlider</title>
+</head>
+<body>
+  <div class="slider">
+    <input class="slides__btn" type="radio" name="common" id="btn-1" checked>
+    <input class="slides__btn" type="radio" name="common" id="btn-2">
+    <input class="slides__btn" type="radio" name="common" id="btn-3">
+    <input class="slides__btn" type="radio" name="common" id="btn-4">
+
+    <div class="container">
+      <div class="slider__top">
+        <div class="slides">
+          <div class="slides__img" id="slides-one">
+            <img src="img/item-1.jpg" alt="slide one">
+          </div>
+          <div class="slides__img">
+            <img src="img/item-2.jpg" alt="slide two">
+          </div>
+          <div class="slides__img">
+            <img src="img/item-3.jpg" alt="slide three">
+          </div>
+          <div class="slides__img">
+            <img src="img/item-4.jpg" alt="slide four">
+          </div>
+        </div>
+      </div>
+
+      <div class="slider__bottom">
+        <div class="descr">
+          <div class="descr__slides">
+            <div class="descr__slide" id="descr-one">А ты знал?</div>
+            <div class="descr__slide">Очень серьезный и злой кот.</div>
+            <div class="descr__slide">...именно в сердце.</div>
+            <div class="descr__slide">Оставайся дома и чаще мой руки!</div>
+          </div>
+        </div>
+        
+        <div class="navigator">
+          <label for="btn-1" class="navigator__btn">
+            <span class="bar"></span>
+          </label>
+          <label for="btn-2" class="navigator__btn">
+            <span class="bar"></span>
+          </label>
+          <label for="btn-3" class="navigator__btn">
+            <span class="bar"></span>
+          </label>
+          <label for="btn-4" class="navigator__btn">
+            <span class="bar"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

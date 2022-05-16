@@ -1,0 +1,174 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(49, 49, 49);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* SLIDER */
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 25px);
+  padding: 0 10px;
+}
+
+.slider__top {
+  border: 5px solid #ffea00;
+  overflow: hidden;
+}
+
+.slider__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+
+/* SLIDES */
+.slides {
+  display: flex;
+  height: 100%;
+  width: 400%;
+}
+
+.slides__img {
+  width: 25%;
+  transition: .4s linear;
+}
+
+.slides__img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* NAVIGATOR */
+.navigator {
+  display: flex;
+  justify-content: right;
+}
+
+.navigator__btn {
+  padding: 4px;
+}
+
+.navigator__btn {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* BAR */
+.bar {
+  height: 14px;
+  width: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all .2s linear;
+}
+
+.bar:last-child {
+  margin-right: 0;
+}
+
+.bar:hover {
+  background-color: #ffea00;
+}
+
+/* DESCR */
+.descr {
+  color: #fff;
+  font-size: 24px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.descr__slides {
+  display: flex;
+  width: 400%;
+}
+
+.descr__slide {
+  width: 25%;
+  transition: .4s linear;
+}
+
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+#btn-1:checked ~ .container #slides-one,
+#btn-1:checked ~ .container #descr-one {
+  margin-left: 0;
+}
+
+#btn-2:checked ~ .container #slides-one,
+#btn-2:checked ~ .container #descr-one {
+  margin-left: -25%;
+}
+
+#btn-3:checked ~ .container #slides-one,
+#btn-3:checked ~ .container #descr-one {
+  margin-left: -50%;
+}
+
+#btn-4:checked ~ .container #slides-one,
+#btn-4:checked ~ .container #descr-one {
+  margin-left: -75%;
+}
+
+#btn-1:checked ~ .container label[for="btn-1"] span {
+  background-color: red !important;
+  cursor: default;
+}
+
+#btn-2:checked ~ .container label[for="btn-2"] span {
+  background-color: red !important;
+  cursor: default;
+}
+
+#btn-3:checked ~ .container label[for="btn-3"] span {
+  background-color: red !important;
+  cursor: default;
+}
+
+#btn-4:checked ~ .container label[for="btn-4"] span {
+  background-color: red !important;
+  cursor: default;
+}
+
+label:active span {
+  background-color: #c7b600 !important;
+  transform: scale(1.2);
+}
+
+@media(max-width: 475px) {
+  .slider__bottom {
+    flex-direction: column;
+  }
+
+  .navigator {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .descr {
+    order: 2;
+    font-size: 20px;
+  }
+}
