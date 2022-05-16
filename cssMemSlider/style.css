@@ -37,6 +37,16 @@ body {
   justify-content: right;
 }
 
+.navigator__btn {
+  padding: 4px;
+}
+
+.navigator__btn {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+
 .bar {
   height: 14px;
   width: 14px;
@@ -44,7 +54,6 @@ body {
   border-radius: 50%;
   margin-right: 10px;
   transition: all .2s linear;
-  cursor: pointer;
 }
 
 .bar:last-child {
@@ -96,27 +105,27 @@ input[type="radio"] {
   margin-left: -75%;
 }
 
-#btn-1:checked ~ .container label[for="btn-1"] {
+#btn-1:checked ~ .container label[for="btn-1"] span {
   background-color: red !important;
   cursor: default;
 }
 
-#btn-2:checked ~ .container label[for="btn-2"] {
+#btn-2:checked ~ .container label[for="btn-2"] span {
   background-color: red !important;
   cursor: default;
 }
 
-#btn-3:checked ~ .container label[for="btn-3"] {
+#btn-3:checked ~ .container label[for="btn-3"] span {
   background-color: red !important;
   cursor: default;
 }
 
-#btn-4:checked ~ .container label[for="btn-4"] {
+#btn-4:checked ~ .container label[for="btn-4"] span {
   background-color: red !important;
   cursor: default;
 }
 
-label:active {
+label:active span {
   background-color: #c7b600 !important;
   transform: scale(1.2);
 }
